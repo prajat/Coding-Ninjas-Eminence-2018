@@ -2,6 +2,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - power",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "power",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - stockspan",
             "request": "launch",
             "cwd": "${workspaceFolder}",
