@@ -21,13 +21,13 @@ public class returnpermutations {
 
         char cc = input.charAt(0);
         String[] smallans = permutationOfString(input.substring(1));
-        String[] myans = new String[0];
+        String[] myans = new String[input.length()*smallans.length];
         
         int k = 0;
         for (int j = 0; j < smallans.length; j++) {
-            int len = smallans[j].length();
-            for (int i = 0; i < len; i++) {
-                myans[k] = smallans[j].substring(0, i) + cc + smallans[j].substring(i + 1);
+            String currstring = smallans[j];
+            for (int i = 0; i <=currstring.length(); i++) {
+                myans[k] = currstring.substring(0,i)+cc+currstring.substring(i);
                 k++;
             }
         }
