@@ -2,6 +2,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - murder",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "murder",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - returnpermutations",
             "request": "launch",
             "cwd": "${workspaceFolder}",
