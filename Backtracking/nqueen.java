@@ -36,11 +36,7 @@ public class nqueen {
     }
 
     public static boolean ifpossible(int row, int col, int[][] board) {
-        // for (int i = 0; i < board.length; i++) {
-        //     if (board[row][i] == 1) {
-        //         return false;
-        //     }
-        // }
+       
         for (int i = row-1; i >= 0; i--) {
             if (board[i][col] == 1) {
                 return false;
