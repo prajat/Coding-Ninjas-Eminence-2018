@@ -41,8 +41,9 @@ public class murder {
         int k = 0;
         while (i < mid && j <= end) {
             if (arr[i] < arr[j]) {
-                temp[k++] = arr[i++];
                 sum += (end - j + 1) * arr[i];
+                temp[k++] = arr[i++];
+                
 
             } else {
                 temp[k++] = arr[j++];
