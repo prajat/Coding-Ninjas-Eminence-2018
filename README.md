@@ -1,5 +1,5 @@
 # CodingNinjas-Eminence-CP-2018-
-# Repository for storing implementations and solutions of Assignments and Test qustions in JAVA.
+# Repository for storing implementations and solutions of Assignments and Test questions in JAVA.
 # Full course -stored in managed way.
 *************************************************************************************************************
 I use this repository to store the solutions of problems which I solve in competitive programming course.I primarily use JAVA to solve the problems.
