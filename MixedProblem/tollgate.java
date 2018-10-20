@@ -27,23 +27,24 @@ public class tollgate {
 
     public static int mincost(int i, int[] man, int[] cost, int[] battle) {
         if (i == man.length) {
-            return 1;
+            return 0;
         }
         int option1 = cost[i] + mincost(i + 1, man, cost, battle);
         //battle[2] += man[i];
+        int fightoption = Integer.MAX_VALUE;
         int battlecount = count(battle);
         if (battlecount > man[i]) {
             int[] mancount = modifiedbattlecount(battle, man[i]);
-            int fightoption = mincost(i + 1, man, cost, mancount);
+            fightoption = mincost(i + 1, man, cost, mancount);
 
-            return Math.min(option1, fightoption);
+            
 
         } 
-            // int[] battle2 = battle;
-        // battle2[2] += man[i];
-        battle[2] += man[i];
-            int option2 = (2 * cost[i]) + mincost(i + 1, man, cost, battle);
-            return Math.min(option1, option2);
+        
+       battle[2] += man[i];
+        int option2 = (2 * cost[i]) + mincost(i + 1, man, cost, battle);
+            battle[2] -= man[i];
+            return Math.min(option1, Math.min(fightoption, option2));
         
         
         
@@ -66,23 +67,26 @@ public class tollgate {
 
     }
 
-    public static int[] modifiedbattlecount(int[] battle, int man) {
+    public static int[] modifiedbattlecount(int[] battle, int x) {
         
-            for (int i = 0; i < battle.length; i++) {
-                
-            man = man - battle[i];
-            if (man > 0) {
-                battle[i] = 0;
+        
+        int[] updated_men = new int[3];
+        for (int k = 0; k < 3; k++)
+            updated_men[k] = battle[k];
+
+        for (int k = 0; k < 3; k++) {
+            if (x <= updated_men[k] && x >= 0) {
+                updated_men[k] -= x;
+                break;
             } else {
-                battle[i] =(-1)*(man);
-                }
+                x = x - updated_men[k];
+                updated_men[k] = 0;
             }
-        
-        //int a = battle[0];
-        battle[0] = battle[1];
-        battle[1] = battle[2];
-        battle[2] = 0;
-        return battle;
+        }
+        updated_men[0] = updated_men[1];
+        updated_men[1] = updated_men[2];
+        updated_men[2] = 0;
+        return updated_men;
 
         
     }
