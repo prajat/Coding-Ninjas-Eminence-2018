@@ -14,6 +14,10 @@ public class Main {
             set.add(s1);
         }
         String word = s.nextLine();
+        // Iterator iterator = set.iterator();
+        // whiel(iterator.hasNext()){
+        //     System.out.println(iterator.next());
+        // }
 
         wordbreak(word, set, "");
     }
