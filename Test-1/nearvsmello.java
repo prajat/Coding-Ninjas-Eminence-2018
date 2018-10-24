@@ -17,9 +17,10 @@ public class nearvsmello {
         }
         int max = 0;
         Arrays.sort(height);
-        for (int i = height.length - 1; i >= 1; i--) {
-            max += height[i] - height[i - 1];
+        for (int i = 0; i < n - 2; i++) {
+            max += height[n - 2] - height[i];
         }
+
         System.out.println(max);
     }
 }
