@@ -12,7 +12,7 @@ public class printincnumbers {
 
     public static void printincnumber(int n, String str) {
         if (n <= 0) {
-            System.out.print(str+" ");
+            System.out.print(str + " ");
             return;
         }
 
@@ -21,13 +21,13 @@ public class printincnumbers {
                 String x = Integer.toString(i);
                 printincnumber(n - 1, str + x);
             }
-        }
-        else {
+        } else {
             for (int i = str.charAt(str.length() - 1) - '0' + 1; i <= 9; i++) {
                 String x = Integer.toString(i);
-                printincnumber(n-1, str+x);
+                printincnumber(n - 1, str + x);
             }
         }
-        
+
     }
+    
 }
