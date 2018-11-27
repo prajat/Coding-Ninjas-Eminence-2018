@@ -20,7 +20,7 @@ public class segmented_seive {
         for (int i = 0; i < isprime.length; i++) {
             isprime[i] = true;
         }
-        for (int i = 2; i * i < isprime.length; i++) {
+        for (int i = 2; i * i <= isprime.length; i++) {
             if (isprime[i] == true) {
                 for (int j = i * i; j < isprime.length; j += i) {
                     isprime[j] = false;
