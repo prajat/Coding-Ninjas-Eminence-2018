@@ -20,12 +20,11 @@ public class knapsackdp {
     }
 
     public static int knapsack(int[] weight, int value[], int maxWeight, int start, int[][] storage) {
-        
-        
+
         if (storage[start][maxWeight] > 0) {
             return storage[start][maxWeight];
         }
-        
+
         if (start == weight.length || maxWeight == 0) {
 
             storage[start][maxWeight] = 0;
@@ -35,12 +34,13 @@ public class knapsackdp {
             storage[start][maxWeight] = knapsack(weight, value, maxWeight, start + 1, storage);
             return storage[start][maxWeight];
         } else {
-            int op1 = value[start] + knapsack(weight, value, maxWeight - weight[start], start + 1,storage);
-            int op2 = knapsack(weight, value, maxWeight, start + 1,storage);
+            int op1 = value[start] + knapsack(weight, value, maxWeight - weight[start], start + 1, storage);
+            int op2 = knapsack(weight, value, maxWeight, start + 1, storage);
             storage[start][maxWeight] = Math.max(op1, op2);
             return storage[start][maxWeight];
 
         }
 
     }
+    
 }
