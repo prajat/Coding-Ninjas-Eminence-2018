@@ -14,6 +14,7 @@ public class LIS_DP {
         int[] output = new int[n];
         output[0] = 1;
         for (int i = 1; i < n; i++) {
+            output[i] = 1;
             for (int j = i - 1; j >= 0; j--) {
                 if (input[j] > input[i]) {
                     continue;
