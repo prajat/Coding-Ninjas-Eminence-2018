@@ -1,5 +1,5 @@
 
-public class Solution {
+public class largestbitonicsubarray {
 
     public static int longestBitonicSubarray(int[] arr) {
 
