@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.*;
 
 public class Solution {
 
@@ -21,12 +22,15 @@ public class Solution {
         ArrayList<ArrayList<Integer>> output = new ArrayList<>();
 
         for (int i = 0; i < visited.length; i++) {
-            if (!visited[i]) {
+            if (visited[i] != true) {
                 ArrayList<Integer> smallans = new ArrayList<>();
-                dfs(edges, edges.length, i, visited,smallans);
+                dfs(edges, edges.length, i, visited, smallans);
                 output.add(smallans);
 
             }
+        }
+        for (int i = 0; i < output.size(); i++) {
+            Collections.sort(output.get(i));
         }
         for (int i = 0; i < output.size(); i++) {
             for (int j = 0; j < output.get(i).size(); j++) {
@@ -36,10 +40,9 @@ public class Solution {
         }
 
     }
-    
+
     public static void dfs(int[][] edges, int n, int start, boolean[] visited, ArrayList<Integer> list) {
-        
-        
+
         list.add(start);
         visited[start] = true;
         for (int i = 0; i < n; i++) {
@@ -49,12 +52,10 @@ public class Solution {
             if (edges[start][i] == 1) {
                 if (visited[i] != true) {
                     dfs(edges, n, i, visited, list);
-                 
 
                 }
             }
         }
-       
 
     }
 }
