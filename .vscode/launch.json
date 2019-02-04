@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - nikunjanddonuts",
+            "request": "launch",
+            "mainClass": "nikunjanddonuts",
+            "projectName": "CodingNinjas-Eminence-CP-2018-_38c9bd64"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "CodingNinjas-Eminence-CP-2018-_38c9bd64"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - murder",
             "request": "launch",
             "cwd": "${workspaceFolder}",
