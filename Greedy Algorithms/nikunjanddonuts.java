@@ -20,8 +20,7 @@ public class nikunjanddonuts{
             miles += count * arr[i];
             count *= 2;
         }
-
-        System.out.print(miles);
+          System.out.print(miles);
 
     }
 
